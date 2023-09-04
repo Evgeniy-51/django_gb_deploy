@@ -1,7 +1,4 @@
-from django.shortcuts import render
-
-from django.http import HttpResponse, HttpResponseNotFound, Http404
-from django.shortcuts import render, redirect
+from django.http import HttpResponse
 import logging
 
 logger = logging.getLogger(__name__)
