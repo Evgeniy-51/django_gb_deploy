@@ -1,0 +1,12 @@
+{% extends 'homework/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    <h3>{{ title }}</h3>
+    {% if total %}
+        <h3>{{ total }}</h3>
+    {% endif %}
+    {% if products %}
+        <h3>{{ products.total_amount }}</h3>
+    {% endif %}
+{% endblock %}

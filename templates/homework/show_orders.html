@@ -1,0 +1,16 @@
+{% extends 'homework/base.html' %}
+
+{% block content %}
+    <h1>{{ name }}</h1>
+
+    {% if orders %}
+        {% for order in orders %}
+            {% for prod in order.products.all %}
+                <h3>Заказ №{{ order.pk }} -  " {{ prod }} "  от {{ order.create_date }}</h3>
+            {% endfor %}
+        {% endfor %}
+    {% else %}
+        <h3>У этого клиента нет заказов</h3>
+    {% endif %}
+
+{% endblock %}
